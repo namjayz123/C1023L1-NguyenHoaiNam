@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test</title>
+    <style>
+        form {
+            font-family: 'Lucida Grande','Lucida Sans Unicode',Tahoma,sans-serif;
+            font-size: 20px;
+            font-weight: 800;
+        }
+        input[type="submit"]{
+           border: 1px solid black;
+           background-color: #fff;
+           border-radius: 5px;
+           width: 70px;
+           height: 30px;
+        }
+        input[type="submit"]:hover{
+            background-color: #888888;
+            color: #fff;
+        }
+        #selectbox{
+            cursor: pointer;
+            width: 160px;
+            border-radius: 10px;
+            height: 30px;
+            font-weight: 700;
+        }
+        #selectbox:active{
+            background-color: #eee;
+        }
+        #selectbox::after{
+            border: 1px solid black;
+        }
+        
+    </style>
+</head>
+<body>
+        <form method="get" action="simple.html">
+            <h1>Order Form</h1>
+            <p>What would you like to buy?<p>
+            <select id="selectbox">
+                    <option value="">Select an option..</option>
+                    <option value="ham">Hamburger (+ 0.5$)</option>
+                    <option value="pi>">Pizza (+ 0.5$)</option>
+                    <option value="Co">CocaCola (+ 0.5$)</option>
+                    <option value="Coo">Coconut (+ 0.5$)</option>
+            </select>
+            <p>How many would you like to order?</p>
+            <input type="radio" name="1"> 1 - $10 <br>
+            <input type="radio" name="2"> 2 - $20 <br>
+            <input type="radio" name="3"> 3 - $25 <br>
+            <p>Name <span style="color: red;">*</span></p>
+            <input type="text" placeholder="FirstName" required>
+            <input type="text" placeholder="LastName" required>
+            <p>Email (Option)</p>
+            <input type="text" size="50" placeholder="Email" required>
+            <p>Phone Number <span style="color: red;">*</span></p>
+            <input type="text" size="3" placeholder="123"> -
+            <input type="text" size="3" placeholder="456"> - 
+            <input type="text" size="3" placeholder="789">
+            <p>Message</p>
+            <textarea name="Message" id="" cols="50" rows="10" placeholder="Message"></textarea>
+            <p><input type="submit" name="submit" value="Submit"></p>
+        </form>
+</body>
+</html>
