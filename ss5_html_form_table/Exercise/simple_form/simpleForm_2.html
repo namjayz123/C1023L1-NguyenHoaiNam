@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            font-size: 20px;
+            font-family: Helvetica, sans-serif;
+            height: 1px;
+            background-color: #fff;
+        }
+        h2 {
+            font-weight: 200;
+            color: blue;
+        }
+        .background{
+            height: 500px;
+            background-color: rgb(248, 248, 143); 
+        }
+        title, h2{
+            background-color: rgb(138, 239, 239);
+            margin-left: 10px;
+            margin-right: 10px;
+            position: relative; top: 10px;
+        }
+        form, p{
+            margin-left: 10px;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            color: blue;
+        }
+        .select{
+            margin-top: -370px;
+            margin-left: 170px;
+        }
+        input[type="text"],
+        input[type="date"],
+        textarea{
+            border: 1px solid #d8d8d8;
+            box-shadow: inset 2px 2px black;
+        }
+        input[type="submit"],
+        input[type="reset"]{
+            width: 70px;
+            height: 30px;
+            background-color: #d8d8d8;
+            border: 1px solid #d8d8d8;
+            box-shadow: inset 1px 1px black;
+        }
+        input[type="submit"]:hover,
+        input[type="reset"]:hover{
+            background-color: blue;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="background">
+        <div class="title">
+            <h2>ĐĂNG KÝ HỌC VIÊN</h2>
+        </div>
+        <form>
+            <div class="information">
+                <p>Your Name</p>
+                <p>Date of Birth</p>
+                <p>Gender</p>
+                <p>Address</p>
+                <br>
+                <br>
+                <br>
+                <p>Class</p>
+                <p>Email</p>
+                <p>Phone</p>
+            </div>
+            <div class="select">
+                <input type="text" name="name"> <br> <br>
+                <input type="date" name="dayofbirth"> <br> <br>
+                <label for="male">
+                    <input type="radio" id="male" name="gender">
+                    <span>Nam</span>
+                </label>
+                <label for="female">
+                    <input type="radio" id="female" name="gender">
+                    <span>Nữ</span>
+                </label> <br> <br>
+                <textarea name="Address" id="" cols="30" rows="5"></textarea> <br> <br>
+                <select>
+                    <option>--Chọn Lớp--</option>
+                </select> <br> <br>
+                <input type="text" name="email"> <br> <br>
+                <input type="text" name="Phone" > <br> <br>
+                <input type="submit" name="Submib" value="Đăng Ký"> 
+                <input type="reset" name="reset" value="Nhập lại">
+            </div>
+        </form>
+    </div>
+</body>
+</html>

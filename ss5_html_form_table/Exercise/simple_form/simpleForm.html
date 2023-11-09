@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-size: 18px;
+        }
+        .background{
+            background-color: rgb(142, 218, 218);
+            width: 1500px;
+            height: 825px;
+            position: absolute;
+        }
+        .head-form{
+            background-color: #fff;
+            width: 600px;
+            height: 220px;
+            text-align: right;
+            position: relative; left: 500px; top: 20px;
+        }
+        .title{
+            color: #fff;
+            background-color: red;
+            text-align: center;
+        }
+        form{
+            position: relative; right: 300px; top: 10px;
+        }
+        p {
+            color: blue;
+            padding-bottom: 4px;
+        }
+        .sothich{
+            position: relative; right: 170px;
+        }
+        .container {
+            display: block
+            ;
+            text-align: left;
+            width: 100%;
+            position: relative; left: 450px; top: -20px;
+            color: orange
+        }
+        input[type="text"],
+        input[type="checkbox"]{
+            background-color: #fff;
+            border: 1px solid #d1d1d1;
+            box-shadow: inset 2px 2px rgb(154, 146, 146);
+        }
+        input[type="submit"],
+        input[type="reset"]{
+            width: 90px;
+            height: 30px;
+            text-align: center;
+            background-color: #d1d1d1;
+            border: 1px solid #fff;
+            box-shadow: inset 2px 2px  rgb(154, 146, 146);
+            position: relative; left: 20px;
+        }
+        input[type="submit"]:hover,
+        input[type="reset"]:hover{
+            color: #fff;
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="background">
+        <div class="head-form">
+            <div class="title">
+                <h2>SỞ THÍCH CỦA BẠN</h2>
+            </div>
+            <form>
+                <p>Your Name: <input type="text" name="yourname"></p>
+                <p class="email">Email: <input type="text" name="email"></p>
+                <p class="sothich">Sở thích: </p>
+            <div class="container">
+                <label for="1">
+                    <input type="checkbox" id="1" name="hobby">
+                    <span class="checktitle">Thể thao</span>
+                </label>
+                <label for="2">
+                    <input type="checkbox" id="2" name="hobby">
+                    <span class="checktitle">Âm nhạc</span>
+                </label>
+                <label for="3">
+                    <input type="checkbox" id="3" name="hobby">
+                    <span class="checktitle">Đọc sách</span>
+                </label><br>
+                <label for="4">
+                    <input type="checkbox" id="4" name="hobby">
+                    <span class="checktitle">Lướt Web</span>
+                </label>
+                <label for="5">
+                    <input type="checkbox" id="5" name="hobby">
+                    <span class="checktitle">Chơi Game</span>
+                </label>
+                <label for="6">
+                    <input type="checkbox" id="6" name="hobby">
+                    <span class="checktitle">Điện Ảnh</span>
+                </label> <br>
+                <label for="7">
+                    <input type="checkbox" id="7" name="hobby">
+                    <span class="checktitle">Du lịch</span>
+                </label>
+                </div>
+                <p><input type="submit" value="Gửi Thông tin"> <span><input type="reset" value="Nhập lại"></span>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
