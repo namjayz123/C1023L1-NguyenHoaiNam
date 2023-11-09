@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <meta charset="UTF-8">
+    <title>Register</title>
+  </body>
+<style>
+  body{
+    font-size: 22px;
+    font-weight: 600;
+  }
+.container {
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+.container input:checked ~ .checkmark {
+  background-color: #2196F3;
+}
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+.container .checkmark:after {
+ 	top: 9px;
+	left: 9px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: white;
+}
+input[type="submit"]{
+  background-color: #fff;
+  border-radius: 7px;
+  width: 90px;
+  border: 1px solid black;
+  height: 30px;
+}
+input[type="submit"]:hover{
+  background-color: #7d7b7b;
+  color: #fff;
+  border: none;
+}
+</style>
+<body>
+
+<form action="http://demo.codegym.vn/6/registration_form/register.php" method="POST">
+<p>Họ và Tên: <br> <input type="text" name="name"></p>
+<p>Email: <br> <input type="text" name="email"></p>
+<p>Số Điện Thoại: <br> <input type="text" name="phone"></p>
+Giới Tính: <br>
+<label class="container"> Nam
+  <input type="radio" checked="checked" name="gender">
+  <span class="checkmark"></span>
+</label>
+<label class="container"> Nữ
+  <input type="radio" name="gender">
+  <span class="checkmark"></span>
+</label>
+<p><input type="submit" value="Đăng Kí"></p>
+</form>
+</body>
+</html>
