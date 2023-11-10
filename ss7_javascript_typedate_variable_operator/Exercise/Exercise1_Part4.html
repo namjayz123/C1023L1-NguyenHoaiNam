@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nam</title>
+</head>
+<body>
+    <script>
+        let message = prompt("CHU VI HÌNH TRÒN: Nhập 'D' nếu bạn có đường kính HOẶC Nhập 'R' nếu bạn có bán kính");
+        if(message == 'D'){
+            let D = Number(prompt("Bạn đã nhập đường kính D vui lòng nhập số của bạn: "));
+            let congthuc = D * 3.14;
+            alert("Đây là kết quả của bạn: " + congthuc); 
+        }
+        else if(message == 'R'){
+            let R = Number(prompt("Bạn đã nhập bán kính R vui lòng nhập số của bạn: "));
+            let congthuc2 = (R * 2) * 3.14;
+            alert("Đây là kết quả của bạn: " + congthuc2);
+        }
+        else{
+            alert("Không hợp lệ nhập 'D' hoặc 'R'");
+        }
+    </script>
+</body>
+</html>
