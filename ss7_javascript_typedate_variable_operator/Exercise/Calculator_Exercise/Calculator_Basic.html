@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nam</title>
+    <style>
+        button{
+            background-color: #eee;
+            width: 110px;
+            height: 30px;
+            border-radius: 10px;
+            border: 1px solid #eee;
+            box-shadow: 3px 3px black;
+        }
+        button:hover{
+            background-color: #e78686;
+            border: 1px solid #e78686;
+        }
+        input{
+            margin-left: 10px;
+            width: 215px;
+            height: 25px;
+            border: 1px solid #d4d4d4;
+            border-radius: 20px;
+        }
+        input:hover{
+            box-shadow: 2px 2px black;
+        }
+    </style>
+</head>
+<body>
+    <h2>Calculator</h2>
+    <input type="text" id="amount1" placeholder="0"> <input type="text" id="amount2" placeholder="0">
+    <br>
+    <br>
+    <button type="button" id="add" onclick="showAdd()">Addition(+)</button>
+    <button type="button" id="sub" onclick="showSub()">Subtraction(-)</button>
+    <button type="button" id="mul" onclick="showMul()">Multiplication(X)</button>
+    <button type="button" id="div" onclick="showDiv()">Division(/)</button>
+    <br> <br> <br>
+    <div id="result"></div>
+</body>
+</html>
+<script>
+    function showAdd(){
+        let amount1 = Number(document.getElementById('amount1').value);
+        let amount2 = Number(document.getElementById('amount2').value);
+        let sum = amount1 + amount2;
+        document.getElementById('result').innerHTML = 'Result Addition: ' + sum;
+    }
+    function showSub(){
+        let amount1 = Number(document.getElementById('amount1').value);
+        let amount2 = Number(document.getElementById('amount2').value);
+        let sub = amount1 - amount2;
+        document.getElementById('result').innerHTML = 'Result Subtraction: ' + sub;
+    }
+    function showMul(){
+        let amount1 = Number(document.getElementById('amount1').value);
+        let amount2 = Number(document.getElementById('amount2').value);
+        let mul = amount1 * amount2;
+        document.getElementById('result').innerHTML = 'Result Multiplication: ' + mul;
+    }
+    function showDiv(){
+        let amount1 = Number(document.getElementById('amount1').value);
+        let amount2 = Number(document.getElementById('amount2').value);
+        let div = amount1 / amount2;
+        document.getElementById('result').innerHTML = 'Result Division: ' + div;
+    }
+</script>
