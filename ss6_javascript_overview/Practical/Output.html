@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoai Nam</title>
+</head>
+<body>
+    <p><button type="button" onclick="do_something()">Click Here</button></p>
+    <div id="hisir"></div>
+    <p><button type="button" onclick="showmessage()">Click Me</button></p>
+    <p><button type="button" onclick="ShowMessage2()">Click Me</button></p>
+    <p><button type="button" onclick="showconsole()">Click Here</button></p>
+</body>
+</html>
+<script>
+    function do_something(){
+        alert("Xin Chào");
+    }
+    function showmessage(){
+        document.getElementById('hisir').innerHTML = 'Xin Chào!'
+    }
+    function ShowMessage2(){
+        document.write('Xin Chào!');
+    }
+    function showconsole(){
+        console.log("Xin Chào!");
+    }
+</script>
