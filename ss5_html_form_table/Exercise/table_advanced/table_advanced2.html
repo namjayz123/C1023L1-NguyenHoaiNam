@@ -3,144 +3,140 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nguyen Hoai Nam</title>
+    <title>Hoai Nam</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
         body{
+            font-size: 20px;
+            text-align: center;
             font-family: Arial, Helvetica, sans-serif;
-            font-weight: 500;
+        }
+        h2{
+            color: blue;
         }
         table{
+            text-align: center;
+            width: 100%;
+            height: 600px;
+            padding-top: 20px;
             border-collapse: collapse;
-
         }
         th, td{
-            border: 1px solid orange;
-            width: 90px;
-            height: 90px;
-            
-        }
-        td {
-            text-align: right;
-        }
-        table .white{
-            background-color: #fff;
             border: 1px solid black;
         }
-        table .black{
-            background-color: black;
-            border: 1px solid black;
+        .hi{
+            height: 30px;
+            border: 1px solid #fff;
         }
-        .background{
+        .red{
+            background-color: red;
+            color: #fff;
+            border: 1px solid #fff;
+        }
+        .orange{
             background-color: orange;
-            width: 100%;
+            color: #fff;
+            border: 1px solid #fff;
+        }
+        .blue{
+            background-color: blue;
+            color: #fff;
+            border: 1px solid #fff;
+        }
+        .size1{
+            height: 40px;
+        }        
+        .dayred{
+            color: red;
+            border: 1px solid #fff;
+        }
+        .dayblue{
+            color: blue;
+            border: 1px solid #fff;
+        }
+        .line{
+            border: 1px solid #fff;
+        }
+        .line2, .nblue, .nred{
+            border: 2px solid #888888;
+        }
+        .nblue{
+            color: blue;
+        }
+        .nred{
+            color: red;
         }
     </style>
 </head>
 <body>
-    <div class="background">
+    <h2>Tháng 10 - October</h2>
     <table>
-        <tbody>
-            <tr>
-                <th></th>
-                <th>1</th>
-                <th>2</th>
-                <th>3</th>
-                <th>4</th>
-                <th>5</th>
-                <th>6</th>
-                <th>7</th>
-                <th>8</th>
-            </tr>
-            <tr>
-                <th>A</th>
-                <td class="white"></td>
-                <td class="black"></td>
-                <td class="white"></td>
-                <td class="black"></td>
-                <td class="white"></td>
-                <td class="black"></td>
-                <td class="white"></td>
-                <td class="black"></td>
-            </tr>
-            <tr>
-                <th>B</th>
-                <td class="black"></td>
-                <td class="white"></td>
-                <td class="black"></td>
-                <td class="white"></td>
-                <td class="black"></td>
-                <td class="white"></td>
-                <td class="black"></td>
-                <td class="white"></td>
-            </tr>
-            <tr>
-                <th>C</th>
-                <td class="white"></td>
-                <td class="black"></td>
-                <td class="white"></td>
-                <td class="black"></td>
-                <td class="white"></td>
-                <td class="black"></td>
-                <td class="white"></td>
-                <td class="black"></td>
-            </tr>
-            <tr>
-                <th>D</th>
-                <td class="black"></td>
-                <td class="white"></td>
-                <td class="black"></td>
-                <td class="white"></td>
-                <td class="black"></td>
-                <td class="white"></td>
-                <td class="black"></td>
-                <td class="white"></td>
-            </tr>
-            <tr>
-                <th>E</th>
-                <td class="white"></td>
-                <td class="black"></td>
-                <td class="white"></td>
-                <td class="black"></td>
-                <td class="white"></td>
-                <td class="black"></td>
-                <td class="white"></td>
-                <td class="black"></td>
-            </tr>
-            <tr>
-                <th>F</th>
-                <td class="black"></td>
-                <td class="white"></td>
-                <td class="black"></td>
-                <td class="white"></td>
-                <td class="black"></td>
-                <td class="white"></td>
-                <td class="black"></td>
-                <td class="white"></td>
-            </tr>
-            <tr>
-                <th>G</th>
-                <td class="white"></td>
-                <td class="black"></td>
-                <td class="white"></td>
-                <td class="black"></td>
-                <td class="white"></td>
-                <td class="black"></td>
-                <td class="white"></td>
-                <td class="black"></td>
-            </tr>
-            <tr>
-                <th>H</th>
-                <td class="black"></td>
-                <td class="white"></td>
-                <td class="black"></td>
-                <td class="white"></td>
-                <td class="black"></td>
-                <td class="white"></td>
-                <td class="black"></td>
-                <td class="white"></td>
-              </tr>
-            </tbody>
-        </table>
-    </div>
+        <tr class="size1">
+            <th class="red">C.Nhật</th>
+            <th class="orange">T.Hai</th>
+            <th class="orange">T.Ba</th>
+            <th class="orange">T.Tư</th>
+            <th class="orange">T.Năm</th>
+            <th class="orange">T.Sáu</th>
+            <th class="blue">T.Bảy</th>
+        </tr>
+        <tr class="size1">
+            <td class="dayred">Sun</td>
+            <td class="line">Mon</td>
+            <td class="line">Tue</td>
+            <td class="line">Wed</td>
+            <td class="line">Thu</td>
+            <td class="line">Fri</td>
+            <td class="dayblue">Sat</td>
+        </tr>   
+        <tr>
+            <td class="line2"></td>
+            <td class="line2"></td>
+            <td class="line2"></td>
+            <td class="line2"></td>
+            <td class="line2">1</td>
+            <td class="line2">2</td>
+            <td class="nblue">3</td>
+        </tr>
+        <tr>
+            <td class="nred">4</td>
+            <td class="line2">5</td>
+            <td class="line2">6</td>
+            <td class="line2">7</td>
+            <td class="line2">8</td>
+            <td class="line2">9</td>
+            <td class="nblue">10</td>
+        </tr>
+        <tr>
+            <td class="nred">11</td>
+            <td class="line2">12</td>
+            <td class="line2">13</td>
+            <td class="line2">14</td>
+            <td class="line2">15</td>
+            <td class="line2">16</td>
+            <td class="nblue">17</td>
+        </tr>
+        <tr>
+            <td class="nred">18</td>
+            <td class="line2">19</td>
+            <td class="line2">20</td>
+            <td class="line2">21</td>
+            <td class="line2">22</td>
+            <td class="line2">23</td>
+            <td class="nblue">24</td>
+        </tr>
+        <tr>
+            <td class="nred">25</td>
+            <td class="line2">26</td>
+            <td class="line2">27</td>
+            <td class="line2">28</td>
+            <td class="line2">29</td>
+            <td class="line2">30</td>
+            <td class="nblue">31</td>
+        </tr>
+    </table>
 </body>
 </html>
