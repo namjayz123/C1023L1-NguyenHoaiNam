@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nam</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            font-size: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 20px;
+        }
+        input[type=text]{
+            border: 1px solid black;
+            border-radius: 20px;
+            width: 200px;
+            height: 25px;
+            margin-bottom: 20px;
+        }
+        input[type=text]:hover{
+            border: 1px solid black;
+            box-shadow: 3px 3px #888888;
+        }
+        button{
+            background-color: rgb(224, 116, 224);
+            border: 1px solid rgb(224, 116, 224);
+            width: 70px;
+            height: 30px;
+            border-radius: 20px;
+            color: #fff;
+            margin-top: 50px;
+        }
+        button:hover{
+            background-color: #888888;
+            border: 1px solid #888888;
+        }
+        select{
+            width: 100px;
+            height: 30px;
+            margin-top: 20px;
+            border-radius: 20px;
+        }
+        select:hover{
+            box-shadow: 3px 3px #888888;
+        }
+    </style>
+</head>
+<body>
+            <h4>Amount:
+                <input type="text" id="amount">
+            </h4>
+            <h4>From Currency:
+                <select name="" id="region">
+                    <option value="VND">VND</option>
+                    <option value="USD">USD</option>
+                    <option value="GPB">GPB</option>
+                    <option value="THB">THB</option>
+                </select>
+            </h4>
+            <h4>To Currency:
+                <select name="" id="money">
+                    <option value="VND">VND</option>
+                    <option value="USD">USD</option>
+                    <option value="GPB">GPB</option>
+                    <option value="THB">THB</option>
+                </select>
+            </h4>
+            <br>
+            <div id="result"></div>
+            <button type="button" onclick="showResult()">Convert</button>
+    </div>
+</body>
+</html>
+<script>
+    function showResult(){
+        let amount = document.getElementById('amount').value;
+        let region = document.getElementById('region').value;
+        let money = document.getElementById('money').value;
+        let result = document.getElementById('result').value;
+        if(region == money){
+            document.getElementById('result').innerHTML = 'result: ' + amount;
+        } 
+        if(region == 'VND' && money == 'USD'){
+            document.getElementById('result').innerHTML = 'result: ' + (amount/24350) + ' USD';
+        }
+        if(region == 'VND' && money == 'GPB'){
+            document.getElementById('result').innerHTML = 'result: ' + (amount/29702) + ' GPB';
+        }
+        if(region == 'VND' && money == 'THB'){
+            document.getElementById('result').innerHTML = 'result: ' + (amount/676) + ' THB';
+        }
+        if(region == 'USD' && money == 'VND'){
+            document.getElementById('result').innerHTML = 'result: ' + (amount*24325) + ' VND';
+        }
+        if(region == 'USD' && money == 'GPB'){
+            document.getElementById('result').innerHTML = 'result: ' + (amount/1.22) + ' GPB';
+        }
+        if(region == 'USD' && money == 'THB'){
+            document.getElementById('result').innerHTML = 'result: ' + (amount*36) + ' THB';
+        }
+        if(region == 'GPB' && money == 'VND'){
+            document.getElementById('result').innerHTML = 'result: ' + (amount*29686) + ' VND';
+        }
+        if(region == 'GPB' && money == 'USD'){
+            document.getElementById('result').innerHTML = 'result: ' + (amount*1.22) + ' USD';
+        }
+        if(region == 'GPB' && money == 'THB'){
+            document.getElementById('result').innerHTML = 'result: ' + (amount*43.95) + ' THB';
+        }
+        if(region == 'THB' && money == 'VND'){
+            document.getElementById('result').innerHTML = 'result: ' + (amount*676) + ' VND';
+        }
+        if(region == 'THB' && money == 'USD'){
+            document.getElementById('result').innerHTML = 'result: ' + (amount/36) + ' USD';
+        }
+        if(region == 'THB' && money == 'GPB'){
+            document.getElementById('result').innerHTML = 'result: ' + (amount/43.95) + ' THB';
+        }
+}  
+</script>
