@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nam</title>
+    <style>
+        input{
+            border: 1px solid #888888;
+            border-radius: 10px;
+            height: 30px;
+            text-align: right;
+        }
+        input:hover{
+            box-shadow: inset 2px 2px #888888;
+        }
+        button{
+            background-color: #888888;
+            border: none;
+            width: 100px;
+            height: 30px;
+            border-radius: 20px;
+        }
+        button:hover{
+            color: #fff;
+            background-color: black;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" name="" id="amount" placeholder="0">
+    <br>
+    <br>
+    <button type="button" onclick="ShowResult()">Kiểm Tra</button>
+    <br>
+    <br>
+    <div id="result"></div>
+</body>
+</html>
+<script >
+    function ShowResult(){
+    let amount = +document.getElementById('amount').value;
+    let leapyear = false;
+    let devisibleby4 = amount % 4 == 0;
+    if(devisibleby4){
+        let devisibleby100 = amount % 100 == 0;
+        if(devisibleby100){
+            let devisibleby400 = amount % 400 == 0;
+            if(devisibleby400){
+                leapyear = true;
+            }
+        }
+        else{
+            leapyear = true;
+        }
+    }
+    if(leapyear){
+        document.getElementById('result').innerText = amount + ' là năm nhuận';
+    }
+    else{
+        document.getElementById('result').innerText = amount + ' không là năm nhuận'
+    }
+}
+</script>
