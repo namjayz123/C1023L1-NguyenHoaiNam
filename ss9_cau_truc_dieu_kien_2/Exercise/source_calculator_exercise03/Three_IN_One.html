@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nam</title>
+    <style>
+        html {
+    height: 100%;
+    /* max-height: 600px; */
+    width: 1000px;
+    background-color: hsla(200,40%,30%,.4);
+    background-image:   
+      url('https://78.media.tumblr.com/cae86e76225a25b17332dfc9cf8b1121/tumblr_p7n8kqHMuD1uy4lhuo1_540.png'), 
+      url('https://78.media.tumblr.com/66445d34fe560351d474af69ef3f2fb0/tumblr_p7n908E1Jb1uy4lhuo1_1280.png'),
+      url('https://78.media.tumblr.com/8cd0a12b7d9d5ba2c7d26f42c25de99f/tumblr_p7n8kqHMuD1uy4lhuo2_1280.png'),
+      url('https://78.media.tumblr.com/5ecb41b654f4e8878f59445b948ede50/tumblr_p7n8on19cV1uy4lhuo1_1280.png'),
+      url('https://78.media.tumblr.com/28bd9a2522fbf8981d680317ccbf4282/tumblr_p7n8kqHMuD1uy4lhuo3_1280.png');
+    background-repeat: repeat-x;
+    background-position: 
+      0 20%,
+      0 100%,
+      0 50%,
+      0 100%,
+      0 0;
+    background-size: 
+      2500px,
+      800px,
+      500px 200px,
+      1000px,
+      400px 260px;
+    animation: 50s para infinite linear;
+    }
+  
+  @keyframes para {
+    100% {
+      background-position: 
+        -5000px 20%,
+        -800px 95%,
+        500px 50%,
+        1000px 100%,
+        400px 0;
+      }
+    }
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+}
+.container{
+    border: 1px solid #888888;
+    border-radius: 20px;
+    margin-top: 30px;
+    margin-left: 300px;
+    width: 600px;
+    height: 500px;
+    background-color: #fff;
+}
+.container:hover{
+    box-shadow: -5px 5px black;
+}
+.box{
+    border: 1px solid black;
+    margin-top: 30px;
+    margin-left: 20px;
+    margin-right: 20px;
+    height: 50px;
+    text-align: right;
+    border-radius: 20px;
+}
+.box:hover{
+    box-shadow: 1px 1px #888888;
+}
+.number{
+    width: 50%;
+    height: 350px;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+.operator{
+    width: 40%;
+    height: 360px;
+    margin-left: 20px;
+    position: relative; top: -350px; left: 300px;
+}
+.btn{
+    font-size: 40px;
+    width: 80px;
+    height: 60px;
+    margin-bottom: 40px;
+    background-color: #a4a4a4;
+    border: 1px solid #888888;
+    cursor: pointer;
+    color: black;
+}
+.btn:hover{
+    background-color: black;
+    color: #fff;
+}
+.num-box{
+    margin-top: 10px;
+    margin-right: 20px;
+}
+
+
+    </style>
+</head> 
+<body>
+    <div class="container">
+        <div class="box">
+            <div class="num-box" id="result"></div>
+        </div>
+        <div class="calculator">
+            <div class="number">
+                <button class="btn" value="7">7</button>
+                <button class="btn" value="8">8</button>
+                <button class="btn" value="9">9</button>
+                <button class="btn" value="4">4</button>
+                <button class="btn" value="5">5</button>
+                <button class="btn" value="6">6</button>
+                <button class="btn" value="1">1</button>
+                <button class="btn" value="2">2</button>
+                <button class="btn" value="3">3</button>
+                <button class="btn" value="0">0</button>
+                <button class="btn" value=".">.</button>
+                <button class="btn" onclick="equal()">=</button>
+            </div>
+            <div class="operator">
+                <button class="btn" onclick="del()">DEL</button>
+                <button class="btn" onclick="clean()">AC</button>
+                <button class="btn" value="+">+</button>
+                <button class="btn" value="-">-</button>
+                <button class="btn" value="*">x</button>
+                <button class="btn" value="/">/</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    const numbers = document.getElementsByClassName('btn');
+    const result = document.getElementById("result");
+
+    for (let number of numbers){
+        number.addEventListener('click', function() {
+            result.innerHTML += this.value
+        });
+    }
+    function equal(){
+        let res = result.innerHTML;
+        let output = eval(res);
+        result.innerHTML = output;
+    }
+    function clean(){
+        result.innerHTML = " ";
+    }
+    function del(){
+        let res = result.innerHTML;
+        result.innerHTML = res.substring(0, res.length - 1);
+    }
+</script>
