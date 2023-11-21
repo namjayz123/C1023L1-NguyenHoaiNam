@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nam</title>
+</head>
+<body>
+    <div class="baitap3">
+        <h3>Bài 3: Tính diện tích hình vuông khi biết cạnh a.</h3>
+        <input type="text" id="canhA" placeholder="nhập vào cạnh a">
+        <button type="button" onclick="bai3()">Kiểm Tra</button>
+        <div id="result-bai3"></div>
+    </div> <br> <hr>
+    <div class="baitap4">
+        <h3>Bài 4: Tính diện tích hình  chữ nhật khi biết 02 cạnh a, b.</h3>
+        <input type="text" id="2canhA" placeholder="nhập cạnh A">
+        <input type="text" id="2canhB" placeholder="nhập cạnh B">
+        <button type="button" onclick="bai4()">Kiểm Tra</button>
+        <div id="result-bai4"></div>
+    </div> <br> <hr>
+    <div class="baitap5">
+        <h3>Bài 5: Tính diện tích tam giác vuông khi biết 02 cạnh kề a, b.</h3>
+        <input type="text" id="tamgiacA" placeholder="nhập cạnh a">
+        <input type="text" id="tamgiacB" placeholder="nhập cạnh b">
+        <button type="button" onclick="bai5()">Kiểm Tra</button>
+        <div id="result-bai5"></div>
+    </div> <br> <hr>
+    <div class="baitap6">
+        <h3>Bài 6: Giải phương trình bậc 1.</h3>
+        <input type="text" id="integerA" placeholder="nhập số A">
+        <input type="text" id="integerB" placeholder="nhập số B">
+        <button type="button" onclick="bai6()">Kiểm Tra</button>
+        <div id="result-bai6"></div>
+    </div> <br> <hr>
+    <div class="baitap7">
+        <h3>Bài 7: Giải phương trình bậc 2.</h3>
+        <input type="text" id="giaiA" placeholder="nhập A">
+        <input type="text" id="giaiB" placeholder="nhập B">
+        <input type="text" id="giaiC" placeholder="nhập C">
+        <button type="button" onclick="bai7()">Kiểm Tra</button>
+        <div id="result-bai7"></div>
+    </div> <br> <hr>
+    <div class="baitap8">
+        <h3>Bài 8: Kiểm tra xem một số nhập vào có phải là tuổi của một người không. Một số nguyên là tuổi của một người khi nhỏ 120 và lơn hơn 0.</h3>
+        <input type="text" id="agePerson" placeholder="Nhập vào tuổi">
+        <button type="button" onclick="bai8()">Kiểm Tra</button>
+        <div id="result-bai8"></div>
+    </div> <br> <hr>
+    <div class="baitap9">
+        <h3>Bài 9: Kiểm tra xem 3 số thực (a,b,c) nhập vào có phải là cạnh của một tam giác. Điều kiện để a,b,c là cạnh của một tam giác là:</h3>
+        <input type="text" id="tamgiacA" placeholder="nhập cạnh a">
+        <input type="text" id="tamgiacB" placeholder="nhập cạnh b">
+        <input type="text" id="tamgiacC" placeholder="nhập canh c">
+        <button type="button" onclick="bai9()">Kiểm Tra</button>
+        <div id="result-bai9"></div>
+    </div> <br> <hr>
+    <div class="baitap10">
+        <h3>Bài 10: Viết chương trình tính giá điện.</h3>
+        <input type="text" id="amountPower" placeholder="nhập Kwh điện">
+        <button type="button" onclick="bai10()">Kiểm Tra</button>
+        <div id="result-bai10"></div>
+    </div> <br> <hr>
+    <div class="baitap11">
+        <h3>Bài 11: Viết chương trình tính thuế thu nhập cá nhân.</h3>
+        <input type="text" id="income" placeholder="nhập vào thu nhập của bạn">
+        <button type="button" onclick="bai11()">Kiểm Tra</button>
+        <div id="result-bai11"></div>
+    </div> <br> <hr>
+    <div class="baitap12">
+        <h3>Viết chương trình tính lãi ngân hàng (lãi mẹ đẻ lãi con) khi biết số tiền ban đầu, số tháng cho vay và lãi xuất hàng tháng</h3>
+        <input type="text" id="sotien" placeholder="Nhập số tiền cần vay">
+        <input type="text" id="laisuat" placeholder="nhập % lãi / năm">
+        <input type="text" id="thoihan" placeholder="Nhập thời hạn vay (tháng)">
+        <button type="button" onclick="bai12()">Kiểm Tra</button>
+        <div id="result-bai12"></div>
+    </div> <br> <hr>
+</body>
+</html>
+<script>
+    function bai3(){
+        let inputA = +document.getElementById('canhA').value;
+        let result = document.getElementById('result-bai3');
+        let s = inputA * inputA
+        result.innerHTML = s + ' (cm2)';
+    }
+    function bai4(){
+        let inputA = +document.getElementById('2canhA').value;
+        let inputB = +document.getElementById('2canhB').value;
+        let result = document.getElementById('result-bai4');
+        let s = inputA * inputB;
+        result.innerHTML = s + ' (cm2)';
+    }
+    function bai5(){
+        let inputA = +document.getElementById('tamgiacA').value;
+        let inputB = +document.getElementById('tamgiacB').value;
+        let result = document.getElementById('result-bai5');
+        let s = 1/2 * (inputA * inputB);
+        result.innerHTML = s ;
+    }
+    function bai6(){
+        let inputA = +document.getElementById('integerA').value;
+        let inputB = +document.getElementById('integerB').value;
+        let result = document.getElementById('result-bai6');
+        if(inputA == 0 && inputB == 0){
+            result.innerHTML = 'Phương trình vô số nghiệm';
+        }
+        else if (inputA == 0 && inputB != 0){
+            result.innerHTML = 'Phương trình vô nghiệm';
+        }
+        else if (inputA != 0 && inputB == 0){
+            result.innerHTML = 'Phương trình có nghiệm x = 0';
+        }
+        else{
+            result.innerHTML = 'Phương trình có nghiệm x = ' + (-inputB/inputA);
+        }
+    }
+    function bai7(){
+        let a = +document.getElementById('giaiA').value;
+        let b = +document.getElementById('giaiB').value;
+        let c = +document.getElementById('giaiC').value;
+        let result = document.getElementById('result-bai7');
+        if(a == 0){
+            // b x + c = 0
+        } else{
+            let delta = Math.pow(b, 2) - 4 * a * c;
+            if(delta == 0){
+                let x = -b / (2 * a);
+                result.innerHTML = 'Phương trình có nghiệm kép: x = ' + x;
+            } else if (delta < 0){
+                result.innerHTML = 'Phương trình vô nghiệm';
+            } else{
+                let x1 = (-b + Math.sqrt(delta)) / (2 * a);
+                let x2 = (-b - Math.sqrt(delta)) / (2 * a);
+                result.innerHTML = 'Phương trình có 2 nghiệm phân biệt: ' + '<br>' + 'x1 = ' + x1 + '<br>' + 'x2 = ' + x2;
+            }
+        }
+    }
+    function bai8(){
+        let age = +document.getElementById('agePerson').value;
+        let result = document.getElementById('result-bai8');
+        if(age < 120 && age > 0){
+            result.innerHTML = age + ' là tuổi của một người'
+        }
+        else{
+            result.innerHTML = age + ' không là tuổi của một người'
+        }
+    }
+    function bai9(){
+        let inputA = +document.getElementById('tamgiacA').value;
+        let inputB = +document.getElementById('tamgiacB').value;
+        let inputC = +document.getElementById('tamgiacC').value;
+        let result = document.getElementById('result-bai9');
+        if(inputA + inputB > inputC && inputA + inputC > inputB && inputB + inputC > inputA){
+            result.innerHTML = inputA + " " + inputB + " " + inputC + " là 3 cạnh của một tam giác";
+        }
+        else{
+            result.innerHTML = inputA + " " + inputB + " " + inputC + " không là 3 cạnh của một tam giác";
+        }
+    }
+    function bai10(){
+        let sodien = +document.getElementById('amountPower').value;
+        let result = document.getElementById('result-bai10');
+        let money = 0;
+        if(sodien < 50){
+            money = sodien * 1000;
+            result.innerHTML = 'Số tiền phải trả là: ' + money + ' VNĐ';
+        }else{
+            money = 50 * 1000 + (sodien - 50) * 1200;
+            result.innerHTML = 'Số tiền phải trả là: ' + money + ' VNĐ';
+        }
+    }
+    function bai11(){
+        let income = +document.getElementById('income').value;
+        let result = document.getElementById('result-bai11');
+        if(income < 7000000){
+            result.innerHTML = (income - (income * 10 / 100)) + ' là số tiền bạn nhận được sau 10% thuế';
+        }
+        else if(income >= 7000000 && income < 15000000){
+            result.innerHTML = (income - (income * 20 / 100)) + ' là số tiền bạn nhận được sau 20% thuế';
+        }
+        else{
+            result.innerHTML = (income - (income * 30 / 100)) + ' là số tiền bạn nhận được sau 30% thuế';
+        }
+    }
+    function bai12(){
+        let money = +document.getElementById('sotien').value;
+        let laisuat = +document.getElementById('laisuat').value;
+        let time = +document.getElementById('thoihan').value;
+        let result = document.getElementById('result-bai12');
+        let payment = money / time;
+        let lai = ((money * laisuat) / 100) / time;
+        result.innerHTML = (payment + lai) + ' là số tiền phải trả hàng tháng';
+    }
+</script>
