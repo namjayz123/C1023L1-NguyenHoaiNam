@@ -9,7 +9,6 @@ function checkPrime(numbers){
 }
 function showResult(){
 let numbers = +document.getElementById('number').value;
-let result = document.getElementById('result-loop');
 let count = 0;
 let i = 2;
     while(count < numbers){
