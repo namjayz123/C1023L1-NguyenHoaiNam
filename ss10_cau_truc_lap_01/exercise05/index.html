@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nam</title>
+</head>
+<body>
+    <button type="button" onclick="showResult()">KIỂM TRA</button>
+    <script>
+        function fibonacci(numbers){
+            if(numbers < 0){
+                return 0;
+            }
+            else if(numbers == 0 || numbers == 1){
+                return numbers;
+            }
+            else{
+                return fibonacci(numbers - 1) + fibonacci(numbers - 2);
+            }
+        }
+        function showResult(){
+            for(let i = 0; i < 20; i++){
+                document.write(fibonacci(i), "<br>");
+            }
+        }
+    </script>
+</body>
+</html>
