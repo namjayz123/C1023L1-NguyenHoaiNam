@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nam</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            position: relative; left: 20px; top: 20px;
+        }
+        input{
+            height: 30px;
+            width: 200px;
+            border-radius: 10px;
+            border: 1px solid #888888;
+        }
+        input:hover{
+            box-shadow: 1px 1px black;
+        }
+        button{
+            border: 1px solid #888888;
+            height: 30px;
+            width: 80px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        button:hover{
+            border: none;
+            background-color: black;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+        <input type="text" id="number" placeholder="Nhập N số nguyên tố đầu tiên"> 
+        <button onclick="showResult()">Kiểm Tra</button>
+        <div id="result-loop"></div>
+</body>
+</html>
+<script src="features.js"></script>
