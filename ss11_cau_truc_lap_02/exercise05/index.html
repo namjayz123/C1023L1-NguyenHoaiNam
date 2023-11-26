@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nam</title>
+</head>
+<body>
+    <h2>Bài 3: In tam giác vuông. Các góc vuông nằm ở các vị trí khác nhau</h2>
+    <button type="button" onclick="showResult1()">HÌNH 1</button>
+    <button type="button" onclick="showResult2()">HÌNH 2</button>
+    <button type="button" onclick="showResult3()">HÌNH 3</button>
+    <button type="button" onclick="showResult4()">HÌNH 4</button>
+    <div class="result"></div>
+</body>
+</html>
+<script>
+    function showResult1(){
+        let n = 5;
+        for(let i = 0; i < n; i++){
+            for(let j = 0; j < i+1; j++){
+                document.write('*');
+            }
+            document.write("<br>");
+        }
+    }
+    function showResult2(){
+        let n = 5;
+        for(let i = 0; i < n; i++){
+            for(let j = 0; j < i; j++){
+                document.write(' ');
+            }
+            for(let j = i; j < n; j++){
+                document.write('*');
+            }
+            document.write("<br>");
+        }
+    }
+    function showResult3(){
+        let n = 5;
+        let result = document.querySelector(".result");
+        for (let i = 0; i < n; i++) {
+            let para = document.createElement('p');
+            let output = '';
+            result.appendChild(para);
+            for (let j = 0; j < n; j++) {
+                j < (n - 1 - i) ? output += '&nbsp; ' : output += '*';
+    }
+            para.innerHTML = output;
+        }   
+    }
+    function showResult4(){
+            alert('open your console log')
+            const n = 5;
+            let str = '';
+            for (let i = 1; i <= n; i++) {
+                for (let j = 1; j <= n; j++) {
+                    if (j <= i - 1) {
+                         str += '  ';
+                } 
+                    else {
+                        str += '* ';
+                }
+    }
+                    str += '\n';
+        }    
+console.log(str);
+    }
+</script>   
