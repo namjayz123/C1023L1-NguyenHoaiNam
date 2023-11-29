@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google</title>
+    <style>
+        body {
+            font-size: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        input{
+            border: 1px solid #888888;
+            border-radius: 10px;
+            width: 200px;
+            height: 30px;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+        }
+        input:hover{
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        }
+        button{
+            height: 30px;
+            width: 70px;
+            background-color: black;
+            color: #fff;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        button:hover{
+            background-color: #888888;
+            border: none;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Translate</h2>
+    <input type="text" id="input">
+    <button type="button" id="btnTran" onclick="showResult()">Dịch</button> <br>
+    <div id="result"></div>
+</body>
+</html>
+<script src="script.js"></script>
